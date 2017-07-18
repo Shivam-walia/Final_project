@@ -4,11 +4,12 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-class user(models.Model):
+class usermod(models.Model):
 
-    name= models.CharField(max_length=255)
-    age= models.IntegerField(default=0)
+    full_name= models.CharField(max_length=255)
+    user_name= models.CharField(max_length=30)
     phone= models.CharField(max_length=20)
     created_on= models.DateTimeField(auto_now_add=True)
+    updated_on=models.DateTimeField(auto_now=True)
     email= models.EmailField(max_length=20)
-
+    password=models.CharField(max_length=30)
