@@ -1,9 +1,9 @@
 
 from django import forms
-from models import usermod
+from models import usermode
 
 class signupform(forms.ModelForm):
     class Meta:
-        model = usermod
-        fields = ['user_name','full_name','email','password']
+        model = usermode
+        fields = ['username','name','email','password']
 
