@@ -32,6 +32,7 @@
 		<center>
 			
 				<form method="post">
+					{% csrf_token %}
 		       <div>
            			<label for="username">Username: </label>
 				<input  style="background-color:teal;" id="username" type="text" name="username" value="{{ user_name}}">
