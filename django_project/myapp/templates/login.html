@@ -1,4 +1,4 @@
-
+{%load static %}
 
 <!Doctype html>
 <html>
@@ -9,12 +9,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap -->
-		
+		<link href="{%static "CSS/bootstrap.css" %}" rel="stylesheet">
 	</head>
-	<body>
-		<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
-			<h1>upload to win </h1>
+	<body background="static/images/ibm.png">
+		<center>	<div class="row">
+				<div class="col-sm-4 col-sm-offset-4">
+			<h1 style="background:teal;">upload to win </h1>
 			<h3>Login </h3>
 			<form method = "post">
 				{% csrf_token %}
@@ -30,5 +30,10 @@
 			</form>
 		</div>
 		</div>
+		</center>
+		<!--javascript files-->
+
+		<script src="{% static "js/jquery-3.2.1.js" %}"></script>
+                <script src="{% static "js/bootstrap.js" %}"></script>
 	</body>
 </html>
