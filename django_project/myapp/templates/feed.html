@@ -10,7 +10,7 @@
 			.d1{
 				margin-left:500px;
 			}
-			h1{
+			h2{
 				margin-left: 30px;
 				color: #F50057;
 				text-transform: capitalize;
@@ -26,13 +26,14 @@
 		</style>
 	</head>
 
-		<body style="background-color:#BBDEFB;">
+	<body style= "background-color:#E0F7FA;">
+		<center>		<h1 style="background-color:teal;">Welcome to upload to win</h1>	</center>
 		<div>
 			<form method = "POST"  action="/post/">
 			{% csrf_token  %}
 			{{ form  }}
-			<input type = "submit" class = "btn btn-success" value="create post" style="margin-right: 1000px; margin-top: 20px">
-				<a class="btn btn-success" value="logout" href="/welcome/" style="margin-left: 50px;">logout</a>
+			<input type = "submit" class = "btn btn-success" value="create post" style="margin-right: 1000px; margin-top: 20px; background-color:#90CAF9; height:40px;">
+			<a class="btn btn-success" value="logout" href="/welcome/" style="margin-left: 50px; height:50%;">Logout</a>
 			</form>
 
 		<div class="s">
@@ -43,7 +44,7 @@
 		</div>
 		</div>
 		<div>
-			<h1>NEW FEEDS</h1>
+			<h2>NEW FEEDS</h2>
 		</div>
 		{% for post in posts  %}
 

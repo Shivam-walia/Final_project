@@ -1,6 +1,6 @@
 
 from django import forms
-from models import usermode,PostModel,LikeModel
+from models import usermode,PostModel,LikeModel,CommentModel
 
 class signupform(forms.ModelForm):
     class Meta:
@@ -11,9 +11,15 @@ class loginform(forms.ModelForm):
         model=usermode
         fields=['username','password']
 class PostForm(forms.ModelForm):
-    model=PostModel
-    fields=['image','caption']
+    class Meta:
+        model=PostModel
+        fields=['image','caption']
 class LikeForm(forms.ModelForm):
     class Meta:
         model=LikeModel
         fields=['post']
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model=CommentModel
+        fields=['comment_text','post']
+

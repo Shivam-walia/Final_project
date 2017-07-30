@@ -10,6 +10,7 @@
 		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 	</head>
 	<body>
+		<center><h1 style="background-color:teal;">Upload to win<h1></center>
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			{{ form }}
