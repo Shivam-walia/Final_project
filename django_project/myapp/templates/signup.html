@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html>
 	
@@ -8,8 +9,8 @@
 
 		<title>Instagram</title>
 
-		<link rel="stylesheet" href= "css/styles.css" >
-		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href= "{%static "css/styles.css" %}" >
+		<link rel="stylesheet" href="{%static "css/bootstrap.css"%}">
 
 	</head>
 
@@ -31,22 +32,22 @@
 					{% csrf_token %}
 		       <div>
            			<label for="username">Username: </label>
-				<input  style="background-color:#B2DFBD;" id="username" type="text" name="username" value="{{ user_name}}">
+				<input  style="background-color:#B2DFBD;" id="username" type="text" name="username" value="{{username}}">
     			</div>
 
      			  <div>
         			   <label for="name">Name: </label>
-				   <input style="background-color:#B2DFBD;" id="name" type="text" name="name" value="{{full_name}}">
+				   <input style="background-color:#B2DFBD;" id="name" type="text" name="name" value="{{name}}">
   			</div>
 
     			   <div>
        				    <label for="email">Email: </label>
-				    <input style="background-color:#B2DFBD;" id="email" type="text" name="email" value="{{email}}">
+				    <input style="background-color:#B2DFBD;" id="email" type="text" name="email" value="{{emai}}">
    		</div>
 
     			   <div>
         			   <label for="password">Password: </label>
-				   <input style="background-color:#B2DFBD;"  id="password" type="password" name="password" value="{{password}}">
+				   <input style="background-color:#B2DFBD;"  id="password" type="password" name="password" value="{{ password }}">
  	      </div>
         		   <input  style="background-color:#FFCCBC;" type="submit" value="Sign Up">
     </form>
@@ -55,10 +56,8 @@
 		</center>
 		
 		
-		<!--javascript -->
-		<script src="js/javascript-3.2.1.js"></script>
-		<!--Bootstrap files-->
-		<script src="js/bootstrap.js"></script>
+		<script src="{% static "js/jquery-3.2.1.js" %}"></script>
+                <script src="{% static "js/bootstrap.js" %}"></script>
 
 
 		
