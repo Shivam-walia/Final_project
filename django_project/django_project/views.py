@@ -16,7 +16,7 @@ def signup_view(request):
     if request.method=='GET':
         #Display signup form       
          signup_form=signupform()
-         template_name='signup.html'
+         
     elif request.method=='POST':
         #process the form data
         signup_form=signupform(request.POST)
@@ -32,9 +32,9 @@ def signup_view(request):
             new_user.save()
             return redirect("/login/")
 
-          #  template_name='success.html'
+          
 
-    return render(request,template_name,{'signup_form':signupform})
+    return render(request,'signup.html', {'signup_form':signupform})
 
 
 #login form
